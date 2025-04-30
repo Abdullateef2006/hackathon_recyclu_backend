@@ -1,0 +1,38 @@
+<div id="notifications"></div>
+
+<script>
+
+
+    
+
+// 👌 Replace this with your actual JWT token
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MTYyMjkxLCJpYXQiOjE3NDUxNTg2OTEsImp0aSI6IjcwNTE3OGMwOTk3MTRiZTk5ZDMwMDBiMGI0ODE5Njg0IiwidXNlcl9pZCI6OH0.ffoPMmgAJbEH7LPIMccJVzN5K6Vm_8o2H_tYqYaB1Jo";
+
+// ✅ Open a WebSocket connection to your Django Channels endpoint
+const ws = new WebSocket(`ws://localhost:8000/ws/notifications/?token=${token}`);
+
+// ✅ Connection opened
+ws.onopen = () => {
+    console.log("✅ WebSocket connected successfully!");
+};
+
+// ✅ Listen for messages
+ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    console.log(data)
+    console.log("📬 New WebSocket Notification:");
+    console.log("🔔 Message:", data.message);
+    console.log("🕒 Created at:", data.created_at);
+};
+
+// ✅ Connection closed
+ws.onclose = () => {
+    console.log("❌ WebSocket connection closed.");
+};
+
+// ✅ Error handling
+ws.onerror = (error) => {
+    console.error("💥 WebSocket error:", error);
+};
+
+</script>
