@@ -16,10 +16,9 @@ This is a project aimed at promoting recycling and sustainability through techno
 ## 🛠️ Technologies Used
 
 - Python
-- Django (or Flask, etc.)
-- HTML, CSS, JavaScript
+- Django and django rest framework(drf)
 - SQLite or PostgreSQL
-- [Add more depending on your stack]
+
 
 ---
 
@@ -29,17 +28,19 @@ This is a project aimed at promoting recycling and sustainability through techno
    ```bash
    git clone https://github.com/yourusername/recyclable-project.git
    cd recyclable-project
-Create and activate a virtual environment:
 
 2. Create a virtual environment
+```bash
 python -m venv env
 source env/bin/activate  # on Windows use `env\Scripts\activate`
 
 3.Install dependencies:
+```bash
 pip install -r requirements.txt
 
 
 4.Run the app:
+```bash
 
 python manage.py runserver
 
