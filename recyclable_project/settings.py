@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-e7_-$un7i$04)3l!f7uca1jv^$e_u&di^jz6o6h7*=2sd#5&uj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.118.101']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -287,3 +287,14 @@ LOGGING = {
 CSRF_TRUSTED_ORIGINS = [
     "http://192.168.118.101",
 ]
+
+
+import os
+
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # This can be any name like 'static_root', but 'staticfiles' is common
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
