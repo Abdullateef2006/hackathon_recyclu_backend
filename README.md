@@ -26,7 +26,7 @@ This is a project aimed at promoting recycling and sustainability through techno
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/recyclable-project.git
+   git clone https://github.com/Abdullateef2006/hackathon_recyclu_backend
    cd recyclable-project
 
 2. Create a virtual environment
