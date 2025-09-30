@@ -128,8 +128,8 @@ A comprehensive recycling and sustainability platform that incentivizes eco-frie
       ```bash
    Create a virtual environment
 
-python -m venv env
-source env/bin/activate  # on Windows use `env\Scripts\activate`
+   python -m venv env
+   source env/bin/activate  on Windows use env\Scripts\activate
    ```bash
 Install dependencies
 
